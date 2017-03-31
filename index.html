@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>AEGIS</title>
+	<meta name="author" content="satoshi_kek">
+	<meta name="description" content="AEGIS">
+	<meta name="keywords" content="AEGIS Travel OTA GDS Blockchain Smart Contrats Hospitality">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+	<link href="css/css.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
+	<link href="css/black-tie.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="css/bootstrap-custom.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/ser.css">
+
+    <script src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['start', 'about', 'work', 'touch'],
+				recordHistory: true,
+                scrollingSpeed: 1000,
+				slidesNavigation: true,
+				loopHorizontal: false,
+				afterLoad: function (anchorLink, index) {
+					//section 2 loaded
+					if (index == 2) {
+						//adding active class to the 1st element in the slide menu
+						$('#menu').find('li').eq(0).addClass('active');
+						$('#menu').find('li').eq(1).removeClass('active');
+						$('#menu').find('li').eq(2).removeClass('active');
+					}
+					if (index == 3) {
+						//adding active class to the 1st element in the slide menu
+						$('#menu').find('li').eq(1).addClass('active');
+						$('#menu').find('li').eq(0).removeClass('active');
+						$('#menu').find('li').eq(2).removeClass('active');
+					}
+					if (index == 4) {
+						//adding active class to the 1st element in the slide menu
+						$('#menu').find('li').eq(2).addClass('active');
+						$('#menu').find('li').eq(1).removeClass('active');
+						$('#menu').find('li').eq(0).removeClass('active');
+					}
+				}
+			});
+		});
+
+
+	</script>
+</head>
+<body>
+
+<div class="borders"></div>
+<div id="particles-js"></div>
+
+<div class="header">
+  <a href="#start" class="logo"><img src="images/logo.png" alt=""></a>
+
+</div>
+
+<div id="fullpage">
+
+</div>
+
+
+<!-- Modal -->
+	<script src="js/particles.min.js"></script>
+	<script src="js/app.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/ser.js"></script>
+
+
+</body>
+</html>
